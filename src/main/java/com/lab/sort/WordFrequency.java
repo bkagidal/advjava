@@ -13,7 +13,7 @@ public class WordFrequency {
 		int MaxWords=50;
 		try{
 			
-			File file = new File("/Users/himavarshakagidala/git/AdvJava/advjava/src/main/java/passage.txt");
+			File file = new File("passage.txt");
 			PrintWriter out = new PrintWriter(new FileWriter("output.txt"));
 			Scanner scanFile = new Scanner(new FileReader(file));
 			String[] wordslist = new String[MaxWords];
