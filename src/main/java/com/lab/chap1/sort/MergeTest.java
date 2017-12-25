@@ -1,4 +1,4 @@
-package com.lab.sort;
+package com.lab.chap1.sort;
 
 public class MergeTest {
 
