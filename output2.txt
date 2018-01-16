@@ -1,0 +1,28 @@
+
+Words             Frequency
+
+are                   2
+be                    1
+because               1
+character             3
+concerned             1
+do                    1
+is                    4
+looking               1
+merely                1
+more                  1
+no                    1
+one                   1
+others                1
+our                   1
+really                1
+reputation            2
+than                  1
+think                 2
+we                    2
+what                  3
+when                  1
+while                 1
+with                  1
+you                   2
+your                  4
