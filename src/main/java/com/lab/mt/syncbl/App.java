@@ -1,7 +1,5 @@
 package com.lab.mt.syncbl;
 
-import java.util.concurrent.locks.Lock;
-
 public class App {
 	
 	private static int count1 = 0;
