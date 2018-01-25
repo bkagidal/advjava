@@ -10,6 +10,44 @@ public class MergeSort {
 		tempArray = new int[nums.length];
 	}
 
+	public void parelleSort(int low, int high, int noofThreads) {
+
+		if (noofThreads <=1) {
+			mergeSort(low, high);
+			return;
+		}
+
+		int middle = (low + high) / 2;
+
+		Thread leftArray = mergeSortParallel(low, middle, noofThreads);
+		Thread rightArray = mergeSortParallel(middle+1 ,high, noofThreads);
+
+		leftArray.start();
+		rightArray.start();
+
+		try {
+			leftArray.join();
+			rightArray.join();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		
+		merge(low, middle, high);
+	}
+
+	private Thread mergeSortParallel(int low, int high, int noofThreads) {
+
+		return new Thread() {
+
+			@Override
+			public void run() {
+
+				parelleSort(low, high, noofThreads/2);
+
+			}
+		};
+	}
+
 	public void mergeSort(int low, int high) {
 
 		if (low >= high) {
