@@ -40,6 +40,7 @@ public class Maze {
 
         while(!stack.isEmpty()) {
             Node tmp = stack.pop();
+            System.out.println(tmp);
             visited.add(tmp);
 
             if (maze[tmp.getY()][tmp.getX()] == 3) {
